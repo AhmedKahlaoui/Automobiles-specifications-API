@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pytest_cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtualenv
+venv/
+.venv/
+
+# Local DB / instance state
+cars.db
+instance/
+
+# Data outputs (optional; keep image small)
+data/
+
+# Frontend (not needed to build the API image)
+frontend/node_modules/
+frontend/dist/
+
+# Git / editor
+.git/
+.vscode/
+.DS_Store

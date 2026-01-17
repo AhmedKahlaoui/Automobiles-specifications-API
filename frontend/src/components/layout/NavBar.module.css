@@ -1,0 +1,105 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(11, 16, 32, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 64px;
+  margin-left: -6px;
+  margin-right: 14px;
+}
+ 
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.brand span {
+  white-space: nowrap;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 1px 6px rgba(0, 0, 0, 0.35));
+}
+
+
+.nav {
+  display: none;
+  gap: 10px;
+}
+
+@media (min-width: 780px) {
+  .nav {
+    display: flex;
+    margin: 0 auto;
+  }
+}
+
+.actions {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.link {
+  padding: 8px 10px;
+  border-radius: 10px;
+  color: var(--muted);
+  transition: background 120ms ease, color 120ms ease;
+}
+
+.link:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.active {
+  color: var(--text);
+  background: rgba(110, 168, 254, 0.14);
+  border: 1px solid rgba(110, 168, 254, 0.25);
+}
+
+.right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.button {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  padding: 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.buttonSecondary {
+  border: 1px solid rgba(110, 168, 254, 0.35);
+  background: rgba(110, 168, 254, 0.14);
+  color: var(--text);
+  padding: 8px 10px;
+  border-radius: 10px;
+}

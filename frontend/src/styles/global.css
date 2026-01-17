@@ -1,0 +1,41 @@
+:root {
+  --bg: #0b1020;
+  --panel: #121a32;
+  --panel2: #0f1730;
+  --text: #e9ecf5;
+  --muted: #aab3d0;
+  --border: rgba(255, 255, 255, 0.12);
+  --brand: #6ea8fe;
+  --danger: #ff6b6b;
+  --ok: #51cf66;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, Noto Sans, sans-serif;
+  color: var(--text);
+  background: radial-gradient(1200px 800px at 20% 0%, rgba(110, 168, 254, 0.15), transparent 60%),
+    radial-gradient(900px 700px at 80% 30%, rgba(81, 207, 102, 0.10), transparent 55%),
+    var(--bg);
+}
+
+a { color: inherit; text-decoration: none; }
+
+.container {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 900px) {
+  .grid.cols-2 { grid-template-columns: 1fr 1fr; }
+  .grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+}

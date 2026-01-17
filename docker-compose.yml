@@ -1,0 +1,18 @@
+services:
+  api:
+    build: .
+    container_name: automobile-specs-api
+    ports:
+      - "5000:5000"
+    environment:
+      # App config
+      FLASK_ENV: production
+      # Persist SQLite under /app/instance (mounted from host)
+      DATABASE_URL: sqlite:////app/instance/cars.db
+      # Helps Swagger UI generate the right host
+      SWAGGER_HOST: localhost:5000
+      # Optional initial admin creation (uncomment and set values)
+      # ADMIN_USER: admin
+      # ADMIN_PASSWORD: secret
+    volumes:
+      - ./instance:/app/instance

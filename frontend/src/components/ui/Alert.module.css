@@ -1,0 +1,29 @@
+.alert {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.title {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.body {
+  color: var(--muted);
+}
+
+.info {
+  background: rgba(110, 168, 254, 0.10);
+  border-color: rgba(110, 168, 254, 0.20);
+}
+
+.danger {
+  background: rgba(255, 107, 107, 0.10);
+  border-color: rgba(255, 107, 107, 0.20);
+}
+
+.success {
+  background: rgba(81, 207, 102, 0.10);
+  border-color: rgba(81, 207, 102, 0.20);
+}
