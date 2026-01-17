@@ -23,6 +23,21 @@ npm install
 npm run dev
 ```
 
+## Run with Docker (Vite dev server)
+
+From the repo root:
+
+```bash
+docker compose up --build frontend
+```
+
+Then open `http://127.0.0.1:5173`.
+
+Notes:
+
+- The frontend container sets `VITE_API_BASE_URL` to `http://127.0.0.1:5000/api/v1` by default.
+- Start the backend separately with `docker compose up --build api` (or run Flask locally).
+
 ## Architecture (strict layering)
 
 - `src/api/*`: 1:1 HTTP wrappers for backend endpoints (no UI logic)

@@ -1,0 +1,15 @@
+node_modules
+.dist
+build
+coverage
+.git
+.vscode
+.DS_Store
+*.log
+
+# Vite output
+/dist
+
+# Env files (optional; keep secrets out of image layers)
+.env
+.env.*

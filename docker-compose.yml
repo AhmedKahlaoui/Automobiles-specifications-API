@@ -16,3 +16,19 @@ services:
       # ADMIN_PASSWORD: secret
     volumes:
       - ./instance:/app/instance
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: automobile-specs-frontend
+    ports:
+      - "5173:5173"
+    environment:
+      # The browser runs on your host machine, so point to the host-mapped API port.
+      VITE_API_BASE_URL: http://127.0.0.1:5000/api/v1
+      # Reliable file watching on Windows + Docker bind mounts
+      CHOKIDAR_USEPOLLING: "true"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules

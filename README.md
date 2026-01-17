@@ -54,7 +54,7 @@ python app.py
 - API base path: `http://127.0.0.1:5000/api/v1`
 - Swagger UI: `http://127.0.0.1:5000/apidocs/`
 
-## Docker (Backend API)
+## (Backend API)
 
 ### Build + run with Docker Compose (recommended)
 
@@ -69,6 +69,32 @@ Notes:
 
 - SQLite is persisted to `./instance/cars.db` via the `docker-compose.yml` volume.
 - To create an initial admin user, set `ADMIN_USER` and `ADMIN_PASSWORD` in `docker-compose.yml` (or via your environment).
+
+## Docker (Frontend Dev Server)
+
+This repo includes a separate Docker container for the Vite dev server so you can start/stop backend and frontend independently in Docker Desktop.
+
+Run only the backend:
+
+```bash
+docker compose up --build api
+```
+
+Run only the frontend:
+
+```bash
+docker compose up --build frontend
+```
+
+Run both:
+
+```bash
+docker compose up --build
+```
+
+- Frontend: `http://127.0.0.1:5173`
+- API: `http://127.0.0.1:5000/api/v1`
+- Swagger UI: `http://127.0.0.1:5000/apidocs/`
 
 ### Build + run with plain Docker
 
